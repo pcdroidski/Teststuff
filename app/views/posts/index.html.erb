@@ -1,0 +1,38 @@
+
+
+<div class="section" id="blogposts">
+	<div class="header">
+	<h1>Listing posts</h1>
+	</div>
+	
+	<% @posts.each do |post| %>
+	<div class="blogpost">
+		<div id="title">
+			<%= link_to post.title, post %>
+		</div>
+		<div id="user">
+			By: <%= link_to post.user.name, user_path(post.user) %>
+		</div>
+		<div id="date">
+			posted on: <%= post.created_at %>
+		</div>
+		<div class="clear" id="content">
+			<p><%= post.content %> </p>
+		</div>
+		<div id="numbercomments">
+			<p>Number of comments: <b><%= post.comments.count %></b>
+		</div>
+		<hr />
+	</div>
+	<% end %>
+<br />
+
+
+</div>
+
+<div class="footer">
+<hr/>
+<%= link_to "Home", root_path %>  |
+ <%= link_to "Users", users_path  %>
+
+</div>

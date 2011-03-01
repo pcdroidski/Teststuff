@@ -1,0 +1,53 @@
+
+
+<div class="section" id="main"
+<p id="notice"><%= notice %></p>
+<br/><hr/>
+	<h2>Post:</h2>
+<div class="blogpost">
+
+	<div id="title">
+  		<%= @post.title %>
+	</div>
+	
+	<div id="content">
+		 <%= @post.content %>
+	</div>
+
+	<p>
+	<b>Tags:</b>
+	<%= join_tags(@post) %>
+	</p>
+
+	<div id="user">
+	By:
+	<%= @user.name %>
+	</div>
+	<br/>
+	</div>
+	<hr/>
+	<h3>Comments:</h3>
+<div class="comments">
+<% if current_user %>
+   
+	<%= render :partial => "comments/comment", :collection => @post.comments %>
+
+
+	<h4>Add a comment:</h4>
+	<%= render "comments/form" %>
+ <% else %>
+	
+   Please  <%= link_to "log in ", log_in_path %>to make comments.
+ <% end %>
+<br />
+
+
+<div class="clear"></div>
+</div>
+</div>
+<div class="footer">
+<hr/>	
+<%= link_to 'Edit Posts', edit_post_path(@post) %> |
+<%= link_to 'Back to Posts', posts_path %>
+</div>
+

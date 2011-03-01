@@ -1,0 +1,47 @@
+
+<div class="section" id="other">
+	<div class="header">
+	<h1>Listing users</h1>
+
+	</div>
+	
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Number of Posts</th>
+    <th>Number of Comments</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to user.name, user %></td>
+    <td><%= user.email %></td>
+    <td><%= user.posts.count %></td>
+    <td><%= user.comments.count %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<div id="new">
+<%= link_to 'New User', new_user_path %>
+<br />
+</div>
+<br />
+
+
+
+</div>
+<div class="footer">
+<hr/>
+<%= link_to "Home", root_path %>  |
+<%= link_to "Posts", posts_path %>  |
+<% if current_user %>
+<%= link_to "My Page", user_path(current_user)  %> <br/>
+<% else %>
+<%= link_to "Log in", log_in_path %>
+<% end %>
+
+
+</div>

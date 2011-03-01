@@ -1,0 +1,14 @@
+
+<div id="comment">
+	<b>Comment:</b>
+	<%= comment.body %>
+</div>
+<div id="user">
+	<b>By:</b>
+	<%= comment.commenter %>
+</div>
+<br/>
+<p>
+	<%= link_to 'Destroy Comment', [comment.post, comment], :confirm => 'Are you sure?', :method => :delete %>
+</p>
+<hr/>

@@ -1,0 +1,127 @@
+<div class="section" id="other">
+	<div class="header">
+	<h2>Information:</h2>
+	</div>
+<p id="notice"><%= notice %></p>
+<br/><hr/>
+<% if current_user == @user %>	
+	
+<p>
+  <b>Name:</b>
+  <%= @current_user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @current_user.email %>
+</p>
+
+	
+
+<%= link_to 'Edit User', edit_user_path(@user) %>
+<br /> <hr />
+
+ <% else %>
+	User Information:
+	<br/>
+	<p>
+	  <b>Name:</b>
+	  <%= @user.name %>
+	</p>
+
+	<p>
+	  <b>Email:</b>
+	  <%= @user.email %>
+	</p>
+<% end %>
+
+
+<h2>Posts: </h2>
+<% if current_user == @user %>	
+<table>
+	<tr> 
+		<th>Title </th>
+		<th>Content </th>
+		<th>Date Created</th>
+		<th></th>
+		<th></th>
+		
+	</tr>
+	
+
+	<% @user.posts.each do |post| %>
+		</tr>
+			<td><%= post.title %>
+			<td>	<%= post.content %>
+			<td> <%= post.created_at %>
+			<td>	<%= link_to "View", user_post_path(@user, post) %>
+			<td>	<%= link_to "Edit", edit_post_path(post) %>
+			
+		</tr>
+	<% end %>
+<% else %>
+<table>
+	<tr> 
+		<th>Title </th>
+		<th>Content </th>
+		<th></th>
+		
+		
+	</tr>
+
+	<% @user.posts.each do |post| %>
+		</tr>
+			<td><%= post.title %>
+			<td>	<%= post.content %>
+			<td>	<%= link_to "View", user_post_path(@user, post) %>
+					
+		</tr>
+	<% end %>
+<% end %>	
+		
+</table>
+	<br />
+	
+<% if current_user == @user %>	
+<div id="new">
+	<%= link_to "New Post", new_user_post_path(@user) %>
+	</div>
+
+<hr />
+ <% else %>
+<hr/>
+<% end%>
+
+<p>
+	<h3>Other users:</h3>
+	<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Email</th>
+	    <th></th>
+	   
+	  </tr>
+
+	
+	<% @users.each do |user| %>
+	  <tr>
+	    <td><%= user.name %></td>
+	    <td><%= user.email %></td>
+	    <td><%= link_to 'Show', user %></td>
+	  	
+	  </tr>
+	<% end %>
+	</table>
+	
+</div>
+
+<div class="footer">
+<hr />
+ <%= link_to 'Users', users_path %>   |
+<%= link_to "Posts", posts_path %>  |
+<% if current_user %>
+<%= link_to "My Page", user_path(current_user.id)  %> <br/>
+<% else %>
+<%= link_to "Log in", log_in_path %>
+<% end %> 
+</div>

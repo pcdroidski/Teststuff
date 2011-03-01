@@ -1,0 +1,286 @@
+body {
+	background: #FF00FF
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.section {
+	margin: 0 auto;
+	width: 800px;
+	padding: 0 auto;
+	
+	
+}
+
+.navigation {
+	height: 35px;
+	width: 500px;
+	background: #CCCC00;
+	margin: 0 auto;
+	border-bottom: 1px solid #000000;
+}
+.navigation div {
+	
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: left;
+	display: block;
+	width: 130px;
+	padding-left: 10px;
+	font-size: 20px;
+}
+.navigation div a {
+	padding-top: 5px;
+	display: block;
+	width: 130px;
+	height: 30px;
+	text-decoration: none;
+}
+.navigation div a:hover {
+	display:block;
+	background: #C00;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.headermain {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #C0C0C0;
+	font-size: 45px;
+	font-weight: bold;
+	border-bottom: 3px solid #000000;
+}
+
+.sidenav {
+	float: left;
+	position: relative;
+	width: 250px;
+	background: #C0C0C0;
+	padding: 5px 5px 5px 5px;
+	margin-left: 25px;
+	margin-top: 50px;
+}
+
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 28px;
+}
+h3 {
+	font-size: 25px;
+}
+
+#main a {
+	
+	text-decoration: none;
+}
+#main a:hover {
+	font-weight: bold;
+	color: #C00;
+}
+
+.header {
+	text-align: center;
+	
+	margin: 0 auto;
+	background: #FFFFFF;
+
+}
+
+#logininfo {
+	background: #FFFF00;
+	
+}
+
+#infopane {
+	font-size: 20px;
+	background: #FFFF00;
+	font-weight: bold;
+}
+
+#main {
+	padding: 10px 10px 10px 10px;	
+	width: 800px;
+	position: relative;
+	
+}
+
+#blogposts {
+	padding: 10px 10px 10px 10px;	
+	width: 800px;
+	position: relative;
+		
+}
+.comments {
+	margin: 10px 0 10px 20px;
+	background: #F0F0F0;
+}
+
+.blogpost {
+	margin: 10px 0 10px 20px;
+	padding: 10px 10px 10px 10px;
+	background: #FFFFFF;
+	}
+
+.blogpost #title {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.blogpost #title a:hover {
+	font-style: italic;
+	text-decoration: none;
+	color: #C00;
+}
+
+.blogpost #date {
+	font-size: 12px;
+	float:left;
+	margin-left: 15px;
+	
+}
+.blogpost #user {
+	font-size: 13px;
+	float: left;	
+	}
+.blogpost #user a {
+	text-decoration: none;
+	font-style: italic;
+}
+.blogpost #user a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+.blogpost #content {
+	font-size: 17px;
+	padding: 5px 0 5px 10px;
+}
+
+#comment {
+	font-size: 17px;
+	margin-bottom: 5px;
+}
+
+#other {
+	padding: 10px 10px 10px 10px;	
+	width: 800px;
+	position: relative;
+	
+}
+
+#other a {
+	margin-left: 15px;
+	font-size: 15px;
+	text-decoration: none;
+}
+#other a:hover {
+	font-weight: bold;
+	color: #C00;
+}
+
+table {
+	border: 2px solid #C00;
+}
+tbody tr th{
+	font-size: 20px;
+	width: 100px;
+	text-align: left;
+	
+}
+
+tbody th {
+	border-right: 1px solid #000;
+	width: 200px;
+	
+}
+
+tbody td {
+	border-right: 1px solid #000;
+	padding-right: 5px;
+	border-top: 1px solid #000;
+	width: 200px;
+}
+
+.field {
+	margin-left: 15px;
+	
+}
+.loginhome {
+	display: block;
+	width: 300px;
+	float: left;
+	font-size: 30px;
+	color: #C00;
+	margin-left: 10px;
+}
+.loginhome .field {
+	font-size: 20px;
+	margin-top: 10px;
+	color: #000000;
+}
+.orsignup {
+	float: left;
+	font-size: 35px;
+	width: 50px;
+	font-size: 35px;
+	margin-left: 45px;
+	display: block;
+	
+}
+.signup  {
+	display: block;
+	float: right;
+	margin-right: 10px;
+	font-size: 30px;
+	color: #C00;
+}
+.signup div {
+	font-size: 20px;
+	color: #000000;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+
+#new {
+	margin-left: 25px;
+}
+
+#new a {
+	font-size: 18px;
+	
+}
+#new a:hover {
+	font-weight: bold;
+}
+
+#numbercomments {
+	font-size:15px;
+	color: #00CC00;
+}
+
+.clear {
+	padding: 0;
+	clear: both;
+	margin: 0;
+}
+
+.footer {
+	width:800px;
+	background: #FFFFFF;
+	margin: 0 auto;
+}
+
+.footer a {
+	font-size: 15px;
+	margin-left:15px;
+	margin-right: 10px;
+	text-decoration: none;
+	
+}
+.footer a:hover{
+	font-weight: bold;
+}
